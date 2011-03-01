@@ -1,6 +1,5 @@
 //Created by Ernesto Carrión
 
-
 function translate(info, tab) {
 
   var url = "http://translate.google.com/?hl=es#en|es|" + info.selectionText;
@@ -11,10 +10,8 @@ function translate(info, tab) {
   console.log("tab: " + JSON.stringify(tab));
 }
 
-// Create one test item for each context type.
 
+// Create the selection context item
 var context = ['selection'];
-var selection =  window.getSelection().toString()
-var title = "Translate " + selection + " to spanish";
-//var title = "Translate to spanish";
+var title = "Translate '%s' to spanish";
 var id = chrome.contextMenus.create({"title": title, "contexts": context, "onclick": translate});

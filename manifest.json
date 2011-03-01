@@ -1,7 +1,7 @@
 {
   "name": "Quick Translate",
   "description": "Quickly translate to spanish words you don't know",
-  "version": "0.5",
+  "version": "1",
   "permissions": ["contextMenus"],
-  "background_page": "main.html"
+  "background_page": "main.html"  
 }
