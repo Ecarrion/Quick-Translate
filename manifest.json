@@ -3,8 +3,8 @@
   "description": "Quickly translate to spanish words you don't know",
   "version": "1",
   "permissions": ["contextMenus"],
-  "icons": {
-    "16": "icon.png"
-  },
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
   "background_page": "main.html"  
 }
