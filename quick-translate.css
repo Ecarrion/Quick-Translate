@@ -1,0 +1,7 @@
+.quick-tooltip {
+    position:absolute;
+    z-index:24; 
+    background-color:#EEB422;
+    color:#000;
+    font-size: 20px;
+}
