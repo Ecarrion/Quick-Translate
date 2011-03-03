@@ -4,7 +4,11 @@
   "version": "1",
   "permissions": ["contextMenus", "tabs", "http://*/*"],
   "content_scripts": [
-    "js" : ["jquery-1.5.1.min.js"]
+    {
+        "matches" : ["http://*/*"],
+        "js" : ["jquery-1.5.1.min.js", "events.js", "instant.js"],
+        "css" : ["quick-translate.css"]       
+    }
   ],
   "icons": { 
     "16": "icon.png",
