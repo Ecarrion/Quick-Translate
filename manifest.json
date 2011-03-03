@@ -5,6 +5,6 @@
   "permissions": ["contextMenus"],
   "icons": { "16": "icon.png",
            "48": "icon.png",
-          "128": "icon128(2).png" },
+          "128": "icon128(2).jpg" },
   "background_page": "main.html"  
 }
