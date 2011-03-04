@@ -2,10 +2,10 @@
   "name": "Quick Translate",
   "description": "Quickly translate to spanish those fancy words or phrases that you don't know.",
   "version": "1.5",
-  "permissions": ["contextMenus", "tabs", "http://*/*"],
+  "permissions": ["contextMenus", "tabs", "://*/*"],
   "content_scripts": [
     {
-        "matches" : ["http://*/*"],
+        "matches" : ["*://*/*"],
         "js" : ["js/jquery-1.5.1.min.js", 
                 "js/content_scripts/events.js", 
                 "js/content_scripts/instant.js"],
