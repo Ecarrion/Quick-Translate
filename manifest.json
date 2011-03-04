@@ -2,7 +2,7 @@
   "name": "Quick Translate",
   "description": "Quickly translate to spanish those fancy words or phrases that you don't know.",
   "version": "1.5",
-  "permissions": ["contextMenus", "tabs", "://*/*"],
+  "permissions": ["contextMenus", "tabs", "*://*/*"],
   "content_scripts": [
     {
         "matches" : ["*://*/*"],
