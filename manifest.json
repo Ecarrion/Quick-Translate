@@ -1,6 +1,6 @@
 {
   "name": "Quick Translate",
-  "description": "Quickly translate to spanish those fancy words or phrases that you don't know.",
+  "description": "Quickly define or translate to spanish those fancy words or phrases that you don't know.",
   "version": "1.6",
   "permissions": ["contextMenus", "tabs", "*://*/*"],
   "content_scripts": [
