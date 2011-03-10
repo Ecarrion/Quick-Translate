@@ -70,7 +70,7 @@ chrome.extension.onRequest.addListener(
             });
         }
         
-        //Change context menu
+        //Updates context menu item with the new language
         if(request.id == "context") {
             title = "Translate '%s' to " + localStorage["to_lang_text"];
             chrome.contextMenus.update(id, {"title": title, "contexts": context, "onclick": translate});
