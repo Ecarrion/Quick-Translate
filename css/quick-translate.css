@@ -1,18 +1,24 @@
 body {
-
-}
-
-header {
-    
-}
-
-header img {
-  padding: 1em;
-  background: #fff;
+    background: #C1CDCD;
 }
 
 header td {
   vertical-align: middle;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 25px !important;
+}
+
+section.content {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+section.content td{
+  font-size: 14px !important;
+}
+
+section.content th{
+  text-align : left;
+  font-size: 20px !important;
 }
 
 .quick-tooltip {
