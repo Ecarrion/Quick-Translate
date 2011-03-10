@@ -3,13 +3,31 @@
 //Redirects to the google translate page with the desired translation
 function translate(info, tab) {
 
-  var url = "http://translate.google.com/?hl=es#en|es|" + info.selectionText;
+   var from = localStorage["from_lang"];
+   var to = localStorage["to_lang"];
+    
+
+   var url = "http://translate.google.com/?hl=en#" + from + "|" + to + "|" + info.selectionText;
   chrome.tabs.create({"url": url, "selected": true});
 
   console.log("item " + info.menuItemId + " was clicked");
   console.log("info: " + JSON.stringify(info));
   
 }
+
+//Loads default conf
+if ( localStorage["from_lang"] == undefined || localStorage["from_lang"] == ""){
+    localStorage["from_lang"] = 'en';
+}
+
+if ( localStorage["from_to"] == undefined || localStorage["from_to"] == ""){
+    localStorage["from_to"] = 'es';
+}
+
+if ( localStorage["to_lang_text"] == undefined || localStorage["to_lang_text"] == ""){
+    localStorage["to_lang_text"] = 'Spanish';
+}
+
 
 //Loads google api
 google.load("language", "1");
@@ -18,9 +36,13 @@ google.load("language", "1");
 chrome.extension.onRequest.addListener(
     function(request, sender, sendResponse) {
     
+    
+        var from = localStorage["from_lang"];
+        var to = localStorage["to_lang"];
+    
         //Calls gogole translate api
         if(request.id == "translate") {    
-            google.language.translate(request.text, 'en', 'es', function(result) {
+            google.language.translate(request.text, from, to, function(result) {
                 translation = result.translation.charAt(0).toUpperCase()
                               + result.translation.substring(1, result.translation.length);
                 sendResponse(translation);
@@ -48,10 +70,16 @@ chrome.extension.onRequest.addListener(
             });
         }
         
+        //Change context menu
+        if(request.id == "context") {
+            title = "Translate '%s' to " + localStorage["to_lang_text"];
+            chrome.contextMenus.update(id, {"title": title, "contexts": context, "onclick": translate});
+        }
+        
         
 });
 
 // Create the selection context item
 var context = ['selection'];
-var title = "Translate '%s' to spanish";
+var title = "Translate '%s' to " + localStorage["to_lang_text"];
 var id = chrome.contextMenus.create({"title": title, "contexts": context, "onclick": translate});
