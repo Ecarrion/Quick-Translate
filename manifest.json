@@ -3,6 +3,7 @@
   "description": "Quickly define or translate your language those fancy words or phrases that you don't know.",
   "version": "1.7",
   "permissions": ["contextMenus", "tabs", "*://*/*"],
+  
   "content_scripts": [
     {
         "matches" : ["*://*/*"],
@@ -12,11 +13,17 @@
         "css" : ["css/quick-translate.css"]       
     }
   ],
+  
   "icons": { 
     "16": "icons/icon.png",
     "48": "icons/icon.png",
     "128": "icons/icon128.png" 
   },
+  
+  "browser_action": {
+    "default_icon" : "icons/icon.png",
+    "popup" : "options.html"
+  },
+  
   "background_page": "main.html"
-  "options_page" : "options.html"
 }
