@@ -1,3 +1,20 @@
+body {
+
+}
+
+header {
+    
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+header td {
+  vertical-align: middle;
+}
+
 .quick-tooltip {
     position:absolute;
     z-index:99999999999;
