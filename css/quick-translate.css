@@ -1,17 +1,3 @@
-.header {
-  vertical-align: middle;
-  font-size: 24px;
-}
-
-.content {
-  font-size: 14px;
-}
-
-.title{
-  font-size: 18px;
-  text-align : left;
-}
-
 .quick-tooltip {
     position:absolute;
     z-index:99999999999;

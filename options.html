@@ -4,50 +4,29 @@
     <title>Quick Translate Options</title>
     <script src="js/jquery-1.5.1.min.js"></script>
     <script type="text/javascript" src="js/options.js"></script>
-    <link href="css/quick-translate.css" rel="stylesheet" type="text/css"> 
+    <link href="css/options.css" rel="stylesheet" type="text/css"> 
   </head>
   
   <body>
-    <header>
-      <table cellspacing="2px" cellpadding="2px">
-        <tr>
-          <td> <img src="icons/icon128.png" width="40px" height="40px" /> </td>
-          <td class="header"> Quick Translate </td>
-        </tr>
-      </table>
-    </header>
     
-    <hr/>
-   
-   <br />
-   
-     <section class="content"> 
-        <table cellspacing="5" cellpadding="5">
-          
-          <tr>
-            <td class="title" colspan="4">
-               Select your languages 
-            </td>
-          </tr>
-          
-          <tr>
-            <td> <strong> From: </strong> </td>
-            <td>
-              <select id="from_lang" name="from_lang">
-              </select>
-            </td>
+    <ul id="header">
+      <li id="logo"> <img src="icons/icon128.png" /> </li>
+      <li id="close"> <a href="javascript:void(0);" >Close</a> </li>
+    </ul>
+    
+     
+    <ul id="content">
+      <li class="subtitle"> Select your languages </li>
+      <li id="languages">
+        <strong> From: </strong>
+        <select id="from_lang" name="from_lang"> </select>
+        <strong> To: </strong>
+        <select id="to_lang" name="to_lang"> </select>
+      </li>
+      <li class="clear-fix"></li>
+    </ul>
+        
             
-           <td> <strong> To: </strong> </td>
-            <td>
-              <select id="to_lang" name="to_lang">
-              </select>
-            </td>            
-          </tr>
-          
-        </table>
-    </section>
-    
   </body>  
-    
 </html>
 
