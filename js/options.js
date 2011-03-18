@@ -101,6 +101,22 @@ $(document).ready(function() {
     //Sends a message to main.js in order to update the context menu
     chrome.extension.sendRequest({id:'context'});
    });
+   
+   $('#img-arr').click( function() {
+   
+    //Swaps selects
+    index_from = select_from.selectedIndex;
+    select_from.selectedIndex = select_to.selectedIndex;
+    select_to.selectedIndex = index_from;
+    
+    //Save local storage
+    localStorage["from_lang"] = select_from[select_from.selectedIndex].value;
+    localStorage["to_lang"] = select_to[select_to.selectedIndex].value;
+    localStorage["to_lang_text"] = select_to[select_to.selectedIndex].text;
+    
+    //Sends a message to main.js in order to update the context menu
+    chrome.extension.sendRequest({id:'context'});
+   });
     
 });
 

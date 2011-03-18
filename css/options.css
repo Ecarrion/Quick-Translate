@@ -1,6 +1,12 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img,object,embed {
     margin:0;
     padding:0;
+    font-family:Arial,Helvetica,Verdana,sans-serif;
+    background: #ebeff9;
+}
+
+select {
+    height: 25px;
 }
 
 #header {
@@ -8,17 +14,36 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
     margin-bottom:3px;
     overflow:hidden;
     padding:3px 3px 4px 3px;
-    width:394px;
+    width:410px;
 }
 
 #content{
+    padding: 20px 3px 4px 7px;
     overflow:hidden;
-    width:400px;
+    width:410px;
 
 }
 
 #logo {
     float:left;
+}
+
+.subtitle{
+    padding: 0px 0px 0px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #4682b4;
+}
+
+#languages{
+    padding: 8px 3px 0px 0px;
+    color: black;
+    font-size: 15px;
+    vertical-align:middle;
+}
+
+#img-arr{
+    padding: 0px;
 }
 
 #close{
