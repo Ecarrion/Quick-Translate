@@ -1,6 +1,6 @@
 {
   "name": "Quick Translate",
-  "description": "Quickly define or translate your language those fancy words or phrases that you don't know.",
+  "description": "Quickly define or translate to your language those fancy words or phrases that you don't know.",
   "version": "1.7",
   "permissions": ["contextMenus", "tabs", "*://*/*"],
   
