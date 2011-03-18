@@ -15,7 +15,7 @@ Select Desired Text and press the 't' key of your keyboard for an instant transl
 * Select Desired Text and press the 'd' key of your keyboard for an instant definition in the active page.
 * Click 'More' for definition using Google Dictionary Web Site
 
-###Change Language
+###Change Language (Just works for translations, not for definitions) 
 * Click on the Quick Translate Icon located next of your address-bar.
 * Choose the your desired languages.
 
