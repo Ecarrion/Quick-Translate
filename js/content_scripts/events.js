@@ -5,6 +5,7 @@ var endY = '';
 var key = '';
 var mouse_in_trans = false;
 var mouse_in_def = false;
+var text_focused = false;
 
 // Capture mouse start location
 $(document).mousedown(function(e){
@@ -23,6 +24,16 @@ $(document).mouseup(function(e){
 	if(!mouse_in_trans) delete_translation();
 	if(!mouse_in_def) delete_definition();	
 });
+
+//Checks wheter an input area is focused on order to prevent translating a defining
+$('input, textarea').focus(function() {
+  text_focused = true;
+});
+
+$('input, textarea').blur(function() {
+  text_focused = false;
+});
+
 
 
 //Checks whether the mouse is in or out the definition tooltip
@@ -59,30 +70,35 @@ function bind_qt(){
 
 //Listent for special key codes
 $(document).keydown(function(e){
-	key = e.keyCode;
+
+    if(!text_focused){
+
+	    key = e.keyCode;
 	
-	//84 is the ascii code for T character
-	if(key == 84) {
+	    //84 is the ascii code for T character
+	    if(key == 84) {
 	
-	    var selected_text = window.getSelection().toString().trim();
-	    if(selected_text != "") {
-	        delete_translation();
-	        delete_definition();
-	        show_translation(startX, startY, endX, endY, selected_text);
-	        bind_qt();
+	        var selected_text = window.getSelection().toString().trim();
+	        if(selected_text != "") {
+	            delete_translation();
+	            delete_definition();
+	            show_translation(startX, startY, endX, endY, selected_text);
+	            bind_qt();
+	        }
 	    }
-	}
 	
-	//68 is the ascii code for D character
-	if(key == 68) {
+	    //68 is the ascii code for D character
+	    if(key == 68) {
 	
-	    var selected_text = window.getSelection().toString().trim();
-	    if(selected_text != "") {
-	        delete_translation();
-	        delete_definition();
-	        show_definition(startX, startY, endX, endY, selected_text);
-	        bind_qd();
+	        var selected_text = window.getSelection().toString().trim();
+	        if(selected_text != "") {
+	            delete_translation();
+	            delete_definition();
+	            show_definition(startX, startY, endX, endY, selected_text);
+	            bind_qd();
+	        }
 	    }
+	    
 	}
 	
 });
