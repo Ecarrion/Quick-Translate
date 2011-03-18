@@ -1,6 +1,6 @@
 # Quick Translate: Chrome Extension
 
-This is a simple extension for translating english words or phrases to spanish using Google and Wordnet apis.
+This is a simple extension for define or translate your language those fancy words or phrases that you don't know using Google and Wordnet apis.
 
 
 ##Usage
@@ -15,6 +15,9 @@ Select Desired Text and press the 't' key of your keyboard for an instant transl
 * Select Desired Text and press the 'd' key of your keyboard for an instant definition in the active page.
 * Click 'More' for definition using Google Dictionary Web Site
 
+###Change Language
+* Click on the Quick Translate Icon located next of your address-bar.
+* Choose the your desired languages.
 
 [Quick Translate](https://chrome.google.com/webstore/detail/kghoiamnhpiljmmndbecoikdganbnagk?hl=en-US)
  by *Ernesto Carrión*
