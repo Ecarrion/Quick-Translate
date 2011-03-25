@@ -55,7 +55,7 @@ var langs = {
   'Ukrainian' : 'uk',
   'Vietnamese' : 'vi',
   'Welsh' : 'cy',
-  'Yiddish' : 'yi',
+  'Yiddish' : 'yi'
 };
 
 //Filling languages and selecting users last selection
