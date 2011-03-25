@@ -20,8 +20,8 @@ if ( localStorage["from_lang"] == undefined || localStorage["from_lang"] == ""){
     localStorage["from_lang"] = 'en';
 }
 
-if ( localStorage["from_to"] == undefined || localStorage["from_to"] == ""){
-    localStorage["from_to"] = 'es';
+if ( localStorage["to_lang"] == undefined || localStorage["to_lang"] == ""){
+    localStorage["to_lang"] = 'es';
 }
 
 if ( localStorage["to_lang_text"] == undefined || localStorage["to_lang_text"] == ""){
