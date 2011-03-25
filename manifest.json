@@ -1,7 +1,7 @@
 {
   "name": "Quick Translate",
   "description": "Quickly define or translate to your language those fancy words or phrases that you don't know.",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "permissions": ["contextMenus", "tabs", "*://*/*"],
   
   "content_scripts": [
@@ -15,13 +15,13 @@
   ],
   
   "icons": { 
-    "16": "icons/icon.png",
-    "48": "icons/icon.png",
+    "16": "icons/icon48.png",
+    "48": "icons/icon48.png",
     "128": "icons/icon128.png" 
   },
   
   "browser_action": {
-    "default_icon" : "icons/icon.png",
+    "default_icon" : "icons/icon48.png",
     "popup" : "options.html"
   },
   
