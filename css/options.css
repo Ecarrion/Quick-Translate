@@ -42,6 +42,10 @@ select {
     vertical-align:middle;
 }
 
+#detectLang{
+    padding: 20px 3px 0px 0px;
+}
+
 #img-arr{
     padding: 0px;
 }
