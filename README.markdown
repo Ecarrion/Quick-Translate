@@ -19,5 +19,8 @@ Select Desired Text and press the 't' key of your keyboard for an instant transl
 * Click on the Quick Translate Icon located next of your address-bar.
 * Choose the your desired languages.
 
+### Detect Language
+* Click on the Detect language checkbox for the app to autotedect the language of the selected text.
+
 [Quick Translate](https://chrome.google.com/webstore/detail/kghoiamnhpiljmmndbecoikdganbnagk?hl=en-US)
  by *Ernesto Carrión*
