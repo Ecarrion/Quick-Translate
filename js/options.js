@@ -89,34 +89,53 @@ $(document).ready(function() {
         
     }
     
+    if(localStorage["detect"] == "true"){
+        $('#detect').attr("checked", true);
+        select_from.disabled = true;
+    }
+    
+    
+    
     //Binds selects and saves the user choise
    $('#from_lang').change(function() {
-    localStorage["from_lang"] = select_from[select_from.selectedIndex].value;
+        localStorage["from_lang"] = select_from[select_from.selectedIndex].value;
    });
     
    $('#to_lang').change(function() {
-    localStorage["to_lang"] = select_to[select_to.selectedIndex].value;
-    localStorage["to_lang_text"] = select_to[select_to.selectedIndex].text;
-    
-    //Sends a message to main.js in order to update the context menu
-    chrome.extension.sendRequest({id:'context'});
+        localStorage["to_lang"] = select_to[select_to.selectedIndex].value;
+        localStorage["to_lang_text"] = select_to[select_to.selectedIndex].text;
+        
+        //Sends a message to main.js in order to update the context menu
+        chrome.extension.sendRequest({id:'context'});
    });
    
    $('#img-arr').click( function() {
    
-    //Swaps selects
-    index_from = select_from.selectedIndex;
-    select_from.selectedIndex = select_to.selectedIndex;
-    select_to.selectedIndex = index_from;
-    
-    //Save local storage
-    localStorage["from_lang"] = select_from[select_from.selectedIndex].value;
-    localStorage["to_lang"] = select_to[select_to.selectedIndex].value;
-    localStorage["to_lang_text"] = select_to[select_to.selectedIndex].text;
-    
-    //Sends a message to main.js in order to update the context menu
-    chrome.extension.sendRequest({id:'context'});
+        //Swaps selects
+        index_from = select_from.selectedIndex;
+        select_from.selectedIndex = select_to.selectedIndex;
+        select_to.selectedIndex = index_from;
+        
+        //Save local storage
+        localStorage["from_lang"] = select_from[select_from.selectedIndex].value;
+        localStorage["to_lang"] = select_to[select_to.selectedIndex].value;
+        localStorage["to_lang_text"] = select_to[select_to.selectedIndex].text;
+        
+        //Sends a message to main.js in order to update the context menu
+        chrome.extension.sendRequest({id:'context'});
    });
-    
+   
+   
+   //handles events if the users decides to detect language
+   $('#detect').click(function () {
+       if ($(this).is(':checked')){
+            localStorage["detect"] = true;
+            select_from.disabled = true;
+       } else {
+            localStorage["detect"] = false;
+            select_from.disabled = false; 
+       }
+   });
+   
 });
 

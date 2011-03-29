@@ -1,9 +1,19 @@
 //Created by Ernesto Carrión
 
+
+function getFromLang(){
+    if(localStorage["detect"] == "true"){
+        return "";
+    } else {
+        return localStorage["from_lang"];
+    }
+}
+
+
 //Redirects to the google translate page with the desired translation
 function translate(info, tab) {
 
-   var from = localStorage["from_lang"];
+   var from = getFromLang();
    var to = localStorage["to_lang"];
     
 
@@ -28,6 +38,10 @@ if ( localStorage["to_lang_text"] == undefined || localStorage["to_lang_text"] =
     localStorage["to_lang_text"] = 'Spanish';
 }
 
+if (localStorage["detect"] == undefined || localStorage["detect"] == ""){
+    localStorage["detect"] = false;
+}
+
 
 //Loads google api
 google.load("language", "1");
@@ -37,7 +51,7 @@ chrome.extension.onRequest.addListener(
     function(request, sender, sendResponse) {
     
     
-        var from = localStorage["from_lang"];
+        var from = getFromLang();
         var to = localStorage["to_lang"];
     
         //Calls gogole translate api
